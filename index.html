@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College_Club_Webpage</title>
+    <style>
+        body{
+            margin: 0;
+            text-align: center;
+            background-color: black;
+
+        }
+        #main{
+            margin: 10px;
+            box-sizing: border-box;
+        }
+        header{
+            height: 100px;
+            background-color: black;
+            align-content: center;
+            display: flex;
+        }
+        img{
+            width: 60px;
+            height: 60px;
+            padding-left: 100px;
+            display: inline-block;
+            margin-top: 25px;
+        }
+        .logo h1{
+            display: inline-block;
+            color: rgba(255, 208, 0, 0.938);
+            margin-top: 28px;
+            padding-left: 15;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .logo{
+            display: flex;
+        }
+        ul{
+            display: flex;
+            list-style-type: none;
+            margin-left: 530px;
+        }
+        li{
+            color: white;
+            font-size: 25px;
+            font-family:monospace;
+            font-weight: 750;
+        }
+        .challenge{
+            margin-right: 35px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease
+        }
+        .events{
+            margin-right: 35px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease
+        }
+        .events:hover{
+            color: rgba(255, 208, 0, 0.938);
+            cursor: pointer;
+        }
+        .hall{
+            margin-right: 35px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease
+        }
+        .hall:hover{
+            color: rgba(255, 208, 0, 0.938);
+            cursor: pointer;
+        }
+        .mission{
+            margin-right: 35px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease
+        }
+        .mission:hover{
+            color: rgba(255, 208, 0, 0.938);
+            cursor: pointer;
+        }
+        .about{
+            margin-top: 20px;
+            transition: background-color 0.3s ease
+        }
+        .about:hover{
+            color: rgba(255, 208, 0, 0.938);
+            cursor: pointer;
+        }
+        .welcome{
+            padding: 80px 20px;
+            background-color: rgb(32, 30, 30);
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .welcome h1{
+            color: rgba(255, 208, 0, 0.938);
+            font-size: 50px;
+            margin-bottom: 20px;
+            margin: 0 auto 40px;
+        }
+        .welcome p{
+            font-size: 25px;
+            color: rgb(231, 226, 226);
+            font-weight: 500;
+            max-width: 1200px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+        .welcome a{
+            background-color: rgba(255, 208, 0, 0.938);
+            color: black;
+            text-decoration: none;
+            padding: 15px 36px;
+            border-radius: 9px;
+            font-weight: bold;
+            font-size: x-large;
+            margin: 0 auto 40px;
+        }
+        .welcome a:hover{
+            background-color: rgb(225, 220, 122);
+            color: black;
+        }
+        .Goals{
+            margin: 0;
+            padding: 30px 20px;
+            background-color: black;
+            color: white;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-align: center;
+        }
+        .Goals h2{
+            font-size: 40px;
+            color: rgba(255, 208, 0, 0.938);
+            margin-bottom: 20px;
+        }
+        .line1{
+            max-width: 800px;
+            margin: 0 auto 30px;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+        .goals{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        .goals h3{
+            color: rgba(255, 208, 0, 0.938);
+            
+        }
+        .container{
+            background-color: black;
+            border: 2px;
+            border: solid;
+            border-color: rgba(255, 208, 0, 0.938);
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+        }
+        .Events{
+            background-color:rgb(32, 30, 30);
+            color: white;
+            padding: 30px 20px;
+            font-family: monospace;
+            text-align: center;
+        }
+        .Events h2{
+            color:rgba(255, 208, 0, 0.938);
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+        .event{
+            background-color: black;
+            border: 2px solid rgb(244, 237, 136);
+            border-radius: 10px;
+            padding: 25px;
+            margin: 20px auto;
+            max-width: 700px;
+            text-align: left;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .event:hover{
+            transform: scale(1.02);
+            box-shadow: 0 0 15px rgba(255, 208, 0, 0.938);
+        }
+        .event h3{
+            color: rgb(244, 237, 136);
+            margin-bottom: 10px;
+            font-size: x-large;
+        }
+        .event p{
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .time{
+            color: rgba(255, 208, 0, 0.938);
+        }
+        .explain{
+            color: rgb(241, 228, 51);
+            font-family: monospace;
+        }
+        footer{
+            background-color: rgb(32, 30, 30);
+            color: white;
+            text-align: center;
+            padding: 30px 10px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .footer-content h3{
+            margin: 0;
+            color: rgba(255, 208, 0, 0.938);
+            font-size: 26px;
+        }
+        .footer-content p{
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        .links{
+            margin: 15px 0;
+        }
+        .links a{
+            text-decoration: none;
+            color: rgba(255, 208, 0, 0.938);
+            margin: 0 5px;
+            font-weight: 500;
+           
+        }
+        .links a:hover{
+            color: white;
+        }
+        .copyright{
+            font-size: 13px;
+            color: rgb(170, 170, 170);
+            margin-top: 15px;
+        }       
+        #hall-of-fame {
+            padding: 50px 10%;
+            font-family: monospace;
+            margin: 0;
+            background-color: black;
+        }
+        .hall-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 50px 0;
+        }
+        .hall-text {
+            flex: 1;
+            padding: 20px;
+        }
+        .hall-text h2 {
+            font-size: 28px;
+            color: rgba(255, 208, 0, 0.938);
+            margin-bottom: 10px;
+        }
+        .hall-text p {
+            font-size: 20px;
+            color: rgba(255, 208, 0, 0.938);
+            line-height: 1.7;
+        }
+        .hall-img {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+        .hall-img img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px black; 
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+    <header>
+            <div class="logo">
+                <img src="syntax club logo.jpg" alt="img not found">
+                <h1>Syntax Club</h1>
+            </div>
+            <div class="main_header">
+                <nav>
+                    <ul>
+                        <li class="mission">Our Goals</li>
+                        <li class="events">Events</li>
+                        <li class="hall">Hall of Fame</li>
+                        <li class="about">About Us</li>
+                    </ul>
+                </nav>
+            </div>
+    </header>
+    <section class="welcome">
+        <h1>Welcome to Syntax Club</h1>
+            <p>
+                We are a team of passionate coders from <strong>Quad AI School of Technology</strong>.  
+                Our goal is to learn, create, and innovate through coding.  
+                Join us and become part of a community where technology meets creativity!
+            </p>
+                <a href="https://www.instagram.com/quad_syntaxclub?igsh=MWc2ZWNsejhkd3JuNA==" target="_blank">Join Us</a>
+    </section>
+    <section class="Goals" id="Goals">
+        <h2>Our Goals</h2>
+        <p class="line1">At <strong> Syntax Club</strong>, Our goal is to inspire creativity, collaboration, and innovation through technology.
+         We aim to build a strong community of coders who code, create, learn and grow together.</p>
+        <div class="goals">
+        <div class="container">
+            <h3>Learn</h3>
+            <p>Conduct coding sessions, workshops, and mentorship programs to strengthen technical skills.</p>
+        </div>
+        <div class="container">
+            <h3>Collaborate</h3>
+            <p>Encourage teamwork through hackathons and real world projects that challenge creativity.</p>
+        </div>
+        <div class="container">
+            <h3>Innovate</h3>
+            <p>Promote problem solving and innovation to prepare members for tech based future.</p>
+        </div>
+        </div>
+    </section>
+    <section class="Events">
+        <h2>Upcoming Events</h2>
+        <article class="event">
+            <h3>HackWave : The Ultimate Hackathon</h3>
+            <p><strong class="time">Date:</strong> November 8 - November 9, 2025</p>
+            <p><strong class="time">Time:</strong> 9:00 AM (Day 1) - 9:00 AM (Day 2)</p>
+            <p class="explain">Build real world projects with your team in 24 hours! Exciting prizes, mentors, and daily accomodities will be provided on house.</p>
+        </article>
+        <article class="event">
+            <h3>Web Wizards Workshop</h3>
+            <p><strong class="time">Date:</strong> November 22, 2025</p>
+            <p><strong class="time">Time:</strong> 10:00 AM - 1:00 PM</p>
+            <p class="explain">Learn to create a modern responsive website using HTML, CSS, and JavaScript ~> perfect for beginners!</p>
+        </article>
+        <article class="event">
+            <h3>Git & GitHub Masterclass</h3>
+            <p><strong class="time">Date:</strong> November 29, 2025</p>
+            <p><strong class="time">Time:</strong> 11:00 AM - 2:00 PM</p>
+            <p class="explain">Master collaboration, version control, and open-source contribution ~> an essential skill for every developer.</p>
+        </article>
+        <article class="event">
+            <h3>CodeSprint Challenge</h3>
+            <p><strong class="time">Date:</strong> December 10, 2025</p>
+            <p><strong class="time">Time:</strong> 6:00 PM - 9:00 PM</p>
+            <p class="explain">Compete in a 3-hour online coding contest to test your logic, speed, and problem solving skills.</p>
+        </article>
+        <article class="event">
+            <h3>TechTalks</h3>
+            <p><strong class="time">Date:</strong> December 18, 2025</p>
+            <p><strong class="time">Time:</strong> 5:00 PM - 7:00 PM</p>
+            <p class="explain">Join lectures of guests from the AI industry as they share insights on innovation and the digital future.</p>
+        </article>
+    </section>
+
+
+    
+  <section id="hall-of-fame">
+    <h1 style="text-align:center; font-size:36px; color:rgba(255, 208, 0, 0.938);">Hall of Fame</h1>
+
+    <div class="hall-container">
+      <div class="hall-text">
+        <h2>Google Fair</h2>
+        <p>Team LoZik did a great job by coming up with the idea of selling experience instead 
+            of the same old ways of selling the product which maybe useful for someone while 
+        useless to someone. And the people loved it and showed appreciation by giving them almost 
+    50% of the total votes.</p>
+      </div>
+      <div class="hall-img">
+        <img src="./hall_of_fame/pic4.webp" alt="IMG_NOT_FOUND" style="height: 550px;">
+      </div>
+    </div>
+
+    <div class="hall-container">
+      <div class="hall-img">
+        <img src="./hall_of_fame/pic6.jpg" alt="IMG_NOT_FOUND" style="height: 400px; max-width: 500px;">
+      </div>
+      <div class="hall-text">
+        <h2>Code 2 Create</h2>
+        <p>In Code 2 Create orgaized by Quad AI School of Technology, Our idea was pitched in front
+           of a real time investor who has invested in many of ideas and have made them successful
+           . Our idea looked great to him and he gave us many tips for the success and flaws of that
+            businesses.
+        </p>
+      </div>
+    </div>
+
+    <div class="hall-container">
+      <div class="hall-text">
+        <h2>Data Science</h2>
+        <p>Mr. Adil who is a great data scientist came to our campus just to meet us and share his
+            insights with us and not only that he also made complex concepts feel so easy and practical
+            to understand.The entire session was so amazing and we will definitely use those insights  
+            and make him proud in future.
+        </p>
+      </div>
+      <div class="hall-img">
+        <img src="./hall_of_fame/pic1.webp" alt="IMG_NOT_FOUND" style="height: 550px;">
+      </div>
+    </div>
+
+  </section>
+
+    <footer>
+        <div class="footer-content">
+            <h3>Syntax Club</h3>
+            <p>Encouraging students to create, explore, and invent through programming.</p>
+        <div class="links">
+            <a href="https://www.instagram.com/quad_syntaxclub?igsh=MWc2ZWNsejhkd3JuNA==" target="_blank" >Instagram</a> |
+            <a href="www.linkedin.com/in/nandini-patel-959962376" target="_blank">LinkedIn</a> |
+            <a href="https://github.com/Nobody-377" target="_blank">GitHub</a> |
+            <a href="Nandinipatel0307@gmail.com" target="_blank">Email</a>
+        </div>
+            <p class="copyright">
+            &copy 2025 Syntax Club | Designed by Nandini Patel
+            </p>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>
