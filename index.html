@@ -43,11 +43,12 @@
             list-style-type: none;
             margin-left: 530px;
         }
-        li{
+        li a{
             color: white;
             font-size: 25px;
             font-family:monospace;
             font-weight: 750;
+            text-decoration: none;
         }
         .challenge{
             margin-right: 35px;
@@ -238,7 +239,7 @@
             color: rgb(170, 170, 170);
             margin-top: 15px;
         }       
-        #hall-of-fame {
+        .hall-of-fame {
             padding: 50px 10%;
             font-family: monospace;
             margin: 0;
@@ -287,10 +288,10 @@
             <div class="main_header">
                 <nav>
                     <ul>
-                        <li class="mission">Our Goals</li>
-                        <li class="events">Events</li>
-                        <li class="hall">Hall of Fame</li>
-                        <li class="about">About Us</li>
+                        <li class="mission"><a href="#goals_">Our Goals</a></li>
+                        <li class="events"><a href="#events_">Events</a></li>
+                        <li class="hall"><a href="#hall_of_fame_">Hall of Fame</a></li>
+                        <li class="about"><a href="#footer_">About Us</a></li>
                     </ul>
                 </nav>
             </div>
@@ -304,7 +305,9 @@
             </p>
                 <a href="https://www.instagram.com/quad_syntaxclub?igsh=MWc2ZWNsejhkd3JuNA==" target="_blank">Join Us</a>
     </section>
-    <section class="Goals" id="Goals">
+
+        
+    <section class="Goals" id="goals_">
         <h2>Our Goals</h2>
         <p class="line1">At <strong> Syntax Club</strong>, Our goal is to inspire creativity, collaboration, and innovation through technology.
          We aim to build a strong community of coders who code, create, learn and grow together.</p>
@@ -323,7 +326,9 @@
         </div>
         </div>
     </section>
-    <section class="Events">
+
+        
+    <section class="Events" id="events_">
         <h2>Upcoming Events</h2>
         <article class="event">
             <h3>HackWave : The Ultimate Hackathon</h3>
@@ -359,9 +364,8 @@
 
 
     
-  <section id="hall-of-fame">
+  <section class="hall-of-fame" id="hall_of_fame_">
     <h1 style="text-align:center; font-size:36px; color:rgba(255, 208, 0, 0.938);">Hall of Fame</h1>
-
     <div class="hall-container">
       <div class="hall-text">
         <h2>Google Fair</h2>
@@ -402,10 +406,10 @@
         <img src="./hall_of_fame/pic1.webp" alt="IMG_NOT_FOUND" style="height: 550px;">
       </div>
     </div>
-
   </section>
 
-    <footer>
+        
+    <footer id="footer_">
         <div class="footer-content">
             <h3>Syntax Club</h3>
             <p>Encouraging students to create, explore, and invent through programming.</p>
@@ -422,4 +426,5 @@
     </footer>
     </div>
 </body>
+
 </html>
